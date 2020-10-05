@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #e66465 0%, #9198e5 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    padding-top: 20px;
+    user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-calculadora {
+    position: relative;
+    margin: 0 auto;
+    width: 320px;
+    background-color: #292f36;
+    box-shadow: 0 19px 38px rgba(19, 19, 19, .24), 0 15px 12px rgba(19, 19, 19, .12);
+    /* text-align: center; */
+    /* color: #ffcd00; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+    outline: none;
+    border: 0;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 1;
+    background-color: transparent;
+    color: #ffce5c;
+    transition: all 300ms;
+    border: 1px solid #0001;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+    color: #f4f4f4;
+    border: 1px solid #ffccc5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.resultado {
+    position: relative;
+    width: 320px;
+    height: 80px;
+    padding: 8px;
+    overflow: hidden;
+    background-color: rgba(19, 19, 19, 0.64);
+    font-size: 32px;
+    line-height: 2;
+    color: #60d63c;
+    text-align: right;
+    direction: rtl;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.numeros {
+    width: 240px;
+    float: left;
+}
+
+.numeros button {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.numeros button:last-child {
+    width: 100%;
+}
+
+.funciones button,
+.operaciones button {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    color: #de36eb;
+}
+
+.funciones button:hover,
+.operaciones button:hover {
+    color: #b696a0;
+}
+
+.funciones {
+    float: left;
+    width: 240px;
 }
