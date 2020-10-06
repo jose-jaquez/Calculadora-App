@@ -20,13 +20,11 @@ const App = () =>{
     return (
     < main className="app-calculadora" >Aplicación Calculadora (App) 
             <Resultado value={value} />
-            <Numeros onClickNumero= { numero =>  funcionModificada(`${texto} ${ numero}` )} />
+            <Numeros onClickNumero= { numero => funcionModificada(`${texto}${numero}` )} />
 
             <Funcion 
-            onContentClear={()=>{
-                funcionModificada(' ')
-}}
-            onDelete = {() => {
+            onContentClear={()=> funcionModificada(' ')}
+             onDelete = {() => {
                 if (texto.length > 0) { 
                     const newfuncionModificada = texto.substring(0, texto.length -1)
                     funcionModificada(newfuncionModificada)
